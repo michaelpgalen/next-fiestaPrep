@@ -8,7 +8,7 @@ const CocktailItem = ({cocktail}) => {
             <a className={articleStyles.card}>
                 <h3>{cocktail.strDrink}</h3>
                 <picture >
-                    <source srcset={cocktail.strDrinkThumb+'/preview'} />
+                    <source srcSet={cocktail.strDrinkThumb+'/preview'} />
                     <img src={cocktail.strDrinkThumb+'/preview'} alt={cocktail.strDrink}/>
                 </picture> 
             </a>

@@ -23,7 +23,7 @@ const cocktail = ({cocktailDetails}) => {
         <div className="cocktailSection">
                 <h2>{cocktailDetails.strDrink}</h2>
                 <picture>
-                    <source srcset={cocktailDetails.strDrinkThumb}/>
+                    <source srcSet={cocktailDetails.strDrinkThumb}/>
                     <img src={cocktailDetails.strDrinkThumb} alt="image of cocktail" width="300"/>
                 </picture> 
                 <h3>Ingredients</h3>
