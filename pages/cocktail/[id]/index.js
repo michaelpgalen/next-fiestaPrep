@@ -1,4 +1,5 @@
 // import Link from "next/link"
+import Image from "next/image"
 
 const cocktail = ({cocktailDetails}) => {
 
@@ -16,15 +17,16 @@ const cocktail = ({cocktailDetails}) => {
         }
     }
 
+    // <Image src={cocktailDetails.strDrinkThumb} alt="image of cocktail" layout="fill" className="cocktailImg"/>
 
     return (
-        <div className="row">
-            <div className="column">
-                <img src={cocktailDetails.strDrinkThumb} alt="image of cocktail" className="cocktailImg"/>
-            </div>
-            <div className="column">
+        <div className="cocktailSection">
                 <h2>{cocktailDetails.strDrink}</h2>
-                <h3 className="mt-0">Ingredients</h3>
+                <picture>
+                    <source srcset={cocktailDetails.strDrinkThumb}/>
+                    <img src={cocktailDetails.strDrinkThumb} alt="image of cocktail" width="300"/>
+                </picture> 
+                <h3>Ingredients</h3>
                 <ul>
                     <li>Glass: {cocktailDetails.strGlass}</li>
                     {ingredientLi(cocktailDetails.strIngredient1, measurementCall(cocktailDetails.strMeasure1))}
@@ -44,7 +46,6 @@ const cocktail = ({cocktailDetails}) => {
                 <p>
                     {cocktailDetails.strInstructions}
                 </p>
-            </div>
            
         </div>
     )

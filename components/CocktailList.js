@@ -5,7 +5,7 @@ const CocktailList = ({tequilaCocktails}) => {
     return (
         <div className={articleStyles.grid}>
             {tequilaCocktails.drinks.map( cocktail => 
-            <CocktailItem cocktail={cocktail}/>)}
+            <CocktailItem cocktail={cocktail} key={cocktail.strDrink}/>)}
         </div>
     )
 }
