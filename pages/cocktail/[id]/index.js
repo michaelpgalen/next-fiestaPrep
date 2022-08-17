@@ -1,5 +1,4 @@
-// import Link from "next/link"
-import Image from "next/image"
+import Meta from "../../../components/Meta"
 
 const cocktail = ({cocktailDetails}) => {
 
@@ -17,10 +16,9 @@ const cocktail = ({cocktailDetails}) => {
         }
     }
 
-    // <Image src={cocktailDetails.strDrinkThumb} alt="image of cocktail" layout="fill" className="cocktailImg"/>
-
     return (
         <div className="cocktailSection">
+            <Meta title={cocktailDetails.strDrink}/>
                 <h2>{cocktailDetails.strDrink}</h2>
                 <picture>
                     <source srcSet={cocktailDetails.strDrinkThumb}/>
